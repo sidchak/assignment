@@ -21,5 +21,5 @@ Open the TestRunner:
 node_modules\.bin\cypress open
 
 
-Run Eslint to scan JS code, if adheres by the rukes of JS :
-$ ./node_modules/.bin/eslint test1.js
+Run Eslint to scan JS test scripts :
+npm run lint
