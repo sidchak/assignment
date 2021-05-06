@@ -1,0 +1,32 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "sca",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run",
+    "clean:reports": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\mochareports",
+    "pretest": "npm run clean:reports",
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "recorddashboardTest": "npm run test -- --record --key bfedca34-2435-4ea0-8d35-f49a9921e984 --reporter mochawesome",
+    "merge": "mochawesome-merge cypress/reports/mochawesome-report/*.json > cypress/reports/output.json",
+    "generate_mochawesome_report": "marge cypress/reports/output.json --reportDir ./ --inline",
+    "final-report": "npm run merge && npm run generate_mochawesome_report",
+    "lint":"eslint ./"
+  },
+  "author": "sid",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.2.0",
+    "cypress-image-snapshot": "^4.0.1",
+    "eslint": "^7.25.0",
+    "eslint-plugin-react": "^7.23.2",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0"
+  },
+  "dependencies": {
+    "mochawesome-report-generator": "^5.2.0"
+  }
+}

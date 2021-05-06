@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-11T06:55:04.847Z",
+    "end": "2021-03-11T06:57:29.408Z",
+    "duration": 144561,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4f41d945-9df6-4c53-bc39-a8f3e65d91f0",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test3.js",
+      "file": "cypress/integration/examples/test3.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b2ee9108-790b-4a11-8a82-a9d8769fe3d6",
+          "title": "Validate the Clause Review and variance analysis process and verify the status of the analysis of previous and the current analysis",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Clause Variance analysis from a contract document and verify the status of the analysis",
+              "fullTitle": "Validate the Clause Review and variance analysis process and verify the status of the analysis of previous and the current analysis Clause Variance analysis from a contract document and verify the status of the analysis",
+              "timedOut": null,
+              "duration": 142884,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://staging.docskiff.ai/\");\ncy.wait(2000);\ncy.get('#loginemail').type('siddartha.c@standav.com');\ncy.wait(4000);\ncy.get('.text-right > .btn').click();\ncy.wait(6000);\ncy.get('#loginpassword').type('Rich13*arab');\ncy.get('.btn-primary').click();\ncy.wait(4000);\ncy.get(':nth-child(3) > a > .client_menu_icons').click();\ncy.wait(4000);\ncy.get('[style=\"margin-bottom: 5px;\"] > .nav > :nth-child(2) > a').click();\ncy.wait(4000);\ncy.get('input[id=\"chkFolder_static/input_files/59/59_contracts/227\"]').click();\ncy.wait(4000);\ncy.get('input[id=\"chkFile_static/input_files/59/59_contracts/227/SET3_M_Farmers_56-6184_2-20_KY_FSPA_Mockup_v2.pdf\"]').click();\ncy.wait(4000);\ncy.get('.col-sm-12 > .btn').click();\ncy.wait(100000);\ncy.get('tr td:nth-child(7)').each(function ($e1, index, $list) {\n  var status = $e1.text();\n  if (status.includes(\"Completed\")) {\n    expect(status).to.equal(' Completed ');\n  }\n});",
+              "err": {},
+              "uuid": "c5cea24d-e8ca-441a-89e6-e00d943abcc7",
+              "parentUUID": "b2ee9108-790b-4a11-8a82-a9d8769fe3d6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c5cea24d-e8ca-441a-89e6-e00d943abcc7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 142884,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "trashAssetsBeforeRuns": true,
+        "pageLoadTimeout": 100000,
+        "env": {
+          "url": "https://staging.docskiff.ai/"
+        }
+      },
+      "version": "5.2.0"
+    }
+  }
+}

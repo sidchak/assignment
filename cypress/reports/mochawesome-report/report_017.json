@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-12T11:00:01.257Z",
+    "end": "2021-03-12T11:00:35.162Z",
+    "duration": 33905,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "04c3430e-012d-4e8e-97ee-147a9a0c7427",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test4.js",
+      "file": "cypress/integration/examples/test4.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ded20afc-a714-44e4-bd79-3f274a86fa30",
+          "title": "validate the outlay of the home page and compare with that with the production instance",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Take the screenshot of entire home page in staging env",
+              "fullTitle": "validate the outlay of the home page and compare with that with the production instance Take the screenshot of entire home page in staging env",
+              "timedOut": null,
+              "duration": 32026,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://staging.docskiff.ai/\");\ncy.wait(2000);\ncy.get('#loginemail').type('siddartha.c@standav.com');\ncy.wait(2000);\ncy.get('.text-right > .btn').click();\ncy.wait(4000);\ncy.get('#loginpassword').type('Rich13*arab');\ncy.wait(2000);\ncy.get('.btn-primary').click();\ncy.wait(2000);\ncy.screenshot('staging homepage');\ncy.wait(2000);\ncy.get('.hidden-xs > .name_style > .role').click();\ncy.wait(4000);\ncy.get('.dropdown-menu > :nth-child(9) > a').click();",
+              "err": {},
+              "uuid": "ddbd2df3-e617-40b9-b26d-fea090a1b54d",
+              "parentUUID": "ded20afc-a714-44e4-bd79-3f274a86fa30",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ddbd2df3-e617-40b9-b26d-fea090a1b54d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32026,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "trashAssetsBeforeRuns": true,
+        "pageLoadTimeout": 100000,
+        "env": {
+          "url": "https://staging.docskiff.ai/"
+        }
+      },
+      "version": "5.2.0"
+    }
+  }
+}

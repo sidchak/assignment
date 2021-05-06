@@ -1,0 +1,116 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-11T06:52:19.967Z",
+    "end": "2021-03-11T06:54:51.431Z",
+    "duration": 151464,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6af5abcd-df2d-4205-8913-ed5695a3936d",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test2.js",
+      "file": "cypress/integration/examples/test2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b57ce941-9c23-4646-8aa5-a4adc14cd0d7",
+          "title": "Validate the Extraction process and verify the status of the extraction of previous and the current extractions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Extracting from a contract document and verify the status of extraction",
+              "fullTitle": "Validate the Extraction process and verify the status of the extraction of previous and the current extractions Extracting from a contract document and verify the status of extraction",
+              "timedOut": null,
+              "duration": 150281,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('stgurl'));\ncy.wait(2000);\ncy.get('#loginemail').type('siddartha.c@standav.com');\ncy.wait(4000);\ncy.get('.text-right > .btn').click();\ncy.wait(6000);\ncy.get('#loginpassword').type('Rich13*arab');\ncy.get('.btn-primary').click();\ncy.wait(2000);\ncy.get('.nav > :nth-child(5) > a').click();\ncy.wait(4000);\ncy.get('input[id=\"chkFolder_static/input_files/59/59_contracts/227\"]').click();\ncy.wait(4000);\ncy.get('input[id=\"chkFile_static/input_files/59/59_contracts/227/SET3_M_Farmers_56-6184_2-20_KY_FSPA_Mockup_v2.pdf\"]').click();\ncy.wait(4000);\ncy.get('.col-sm-12 > .btn').click();\ncy.wait(100000);\ncy.get('tr td:nth-child(7)').each(function ($e1, index, $list) {\n  var status = $e1.text();\n  if (status.includes(\"Completed\")) {\n    expect(status).to.equal(' Completed ');\n  }\n});\ncy.wait(5000);\ncy.get('.hidden-xs > .name_style > .role').click();\ncy.wait(2000);\ncy.get('.dropdown-menu > :nth-child(9) > a').click();",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<a style=\"cursor:pointer\">...</a>`\n\nThis element `<a>` is not visible because its parent `<ul.dropdown-menu.menu_drop_main.resp-bg.drophover>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<a style=\"cursor:pointer\">...</a>`\n\nThis element `<a>` is not visible because its parent `<ul.dropdown-menu.menu_drop_main.resp-bg.drophover>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureVisibility (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:162505:24)\n    at runAllChecks (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:151373:14)\n    at retryActionability (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:151427:16)\n    at tryCatcher (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:10765:23)\n    at Function.Promise.attempt.Promise.try (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:8039:29)\n    at tryFn (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:167007:21)\n    at whenStable (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:167045:12)\n    at https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:166540:16\n    at tryCatcher (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:10765:23)\n    at Promise._settlePromiseFromHandler (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:8700:31)\n    at Promise._settlePromise (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:8757:18)\n    at Promise._settlePromise0 (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:8802:10)\n    at Promise._settlePromises (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:8882:18)\n    at Promise._fulfill (https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:8826:18)\n    at https://staging.docskiff.ai/__cypress/runner/cypress_runner.js:10440:46\nFrom Your Spec Code:\n    at Context.eval (https://staging.docskiff.ai/__cypress/tests?p=cypress/integration/examples/test2.js:123:9)",
+                "diff": null
+              },
+              "uuid": "ff92826a-53cb-43fa-8f9b-a8dee801c63c",
+              "parentUUID": "b57ce941-9c23-4646-8aa5-a4adc14cd0d7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ff92826a-53cb-43fa-8f9b-a8dee801c63c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 150281,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "trashAssetsBeforeRuns": true,
+        "pageLoadTimeout": 100000,
+        "env": {
+          "url": "https://staging.docskiff.ai/"
+        }
+      },
+      "version": "5.2.0"
+    }
+  }
+}

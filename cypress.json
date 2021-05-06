@@ -1,0 +1,19 @@
+{
+  "reporter": "mochawesome",
+  "projectId": "mc4oie",
+  "reporterOptions": {
+    "reportDir":"cypress/reports/mochawesome-report",
+    "reportFilename":"report",
+    "overwrite": false,
+    "html": true,
+    "json": true,
+    "charts":true,
+    "trashAssetsBeforeRuns": true,
+    "pageLoadTimeout":100000,
+    "env" :
+    {
+      "url" :"https://www.amazon.com/"
+    }
+  }
+ 
+}

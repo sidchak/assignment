@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-12T04:28:11.025Z",
+    "end": "2021-03-12T04:30:43.103Z",
+    "duration": 152078,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "075f3b27-30d0-400f-8c0d-24c2f4fbe23e",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test2.js",
+      "file": "cypress/integration/examples/test2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "58c8c4d7-93b3-40b1-85a0-c85319b89050",
+          "title": "Validate the Extraction process and verify the status of the extraction of previous and the current extractions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Extracting from a contract document and verify the status of extraction",
+              "fullTitle": "Validate the Extraction process and verify the status of the extraction of previous and the current extractions Extracting from a contract document and verify the status of extraction",
+              "timedOut": null,
+              "duration": 150905,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('stgurl'));\ncy.wait(2000);\ncy.get('#loginemail').type('siddartha.c@standav.com');\ncy.wait(4000);\ncy.get('.text-right > .btn').click();\ncy.wait(6000);\ncy.get('#loginpassword').type('Rich13*arab');\ncy.get('.btn-primary').click();\ncy.wait(2000);\ncy.get('.nav > :nth-child(5) > a').click();\ncy.wait(4000);\ncy.get('input[id=\"chkFolder_static/input_files/59/59_contracts/227\"]').click();\ncy.wait(4000);\ncy.get('input[id=\"chkFile_static/input_files/59/59_contracts/227/SET3_M_Farmers_56-6184_2-20_KY_FSPA_Mockup_v2.pdf\"]').click();\ncy.wait(4000);\ncy.get('.col-sm-12 > .btn').click();\ncy.wait(100000);\ncy.get('tr td:nth-child(7)').each(function ($e1, index, $list) {\n  var status = $e1.text();\n  if (status.includes(\"Completed\")) {\n    expect(status).to.equal(' Completed ');\n  }\n});\ncy.wait(5000);\ncy.get('.hidden-xs > .name_style > .role').click();\ncy.wait(2000);\ncy.get('.dropdown-menu > :nth-child(9) > a').click();",
+              "err": {},
+              "uuid": "17eaac39-22ad-485b-9d64-6e653e3885a6",
+              "parentUUID": "58c8c4d7-93b3-40b1-85a0-c85319b89050",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "17eaac39-22ad-485b-9d64-6e653e3885a6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 150905,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "trashAssetsBeforeRuns": true,
+        "pageLoadTimeout": 100000,
+        "env": {
+          "url": "https://staging.docskiff.ai/"
+        }
+      },
+      "version": "5.2.0"
+    }
+  }
+}

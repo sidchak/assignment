@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-12T10:48:09.060Z",
+    "end": "2021-03-12T10:48:48.318Z",
+    "duration": 39258,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "209e5756-996c-4c5a-96ab-2456e257c358",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test1.js",
+      "file": "cypress/integration/examples/test1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e40feb6d-0cff-403d-9350-8eda5ff2c8c1",
+          "title": "SCA Staging-HomePage verification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate the SCA logo",
+              "fullTitle": "SCA Staging-HomePage verification Validate the SCA logo",
+              "timedOut": null,
+              "duration": 36616,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('stgurl'));\ncy.wait(2000);\ncy.get('#loginemail').type('siddartha.c@standav.com');\ncy.wait(4000);\ncy.get('.text-right > .btn').click();\ncy.wait(4000);\ncy.get('#loginpassword').type('Rich13*arab');\ncy.wait(4000);\ncy.get('.btn-primary').click();\ncy.wait(4000); //cy.get('.logo_style').should('not.be.empty');\ncy.get('.logo_style').should('exist');\ncy.wait(4000);\ncy.get('.hidden-xs > .name_style > .role').click();\ncy.wait(2000);\ncy.get('.dropdown-menu > :nth-child(9) > a').click();",
+              "err": {},
+              "uuid": "5c8ab444-ceef-4401-b0b8-1f1a3e383204",
+              "parentUUID": "e40feb6d-0cff-403d-9350-8eda5ff2c8c1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5c8ab444-ceef-4401-b0b8-1f1a3e383204"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36616,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "trashAssetsBeforeRuns": true,
+        "pageLoadTimeout": 100000,
+        "env": {
+          "url": "https://staging.docskiff.ai/"
+        }
+      },
+      "version": "5.2.0"
+    }
+  }
+}

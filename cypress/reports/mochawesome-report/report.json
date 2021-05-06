@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-05T05:48:42.972Z",
+    "end": "2021-03-05T05:49:52.415Z",
+    "duration": 69443,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1d6fe0e1-be0c-426a-8099-edc44d49536e",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\test1.js",
+      "file": "cypress\\integration\\examples\\test1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0b8d9f1e-6747-42fc-8304-73a5cbc456f2",
+          "title": "SCA Staging-HomePage verification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate the SCA logo",
+              "fullTitle": "SCA Staging-HomePage verification Validate the SCA logo",
+              "timedOut": null,
+              "duration": 66292,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://staging.docskiff.ai/\");\ncy.wait(2000);\ncy.get('#loginemail').type('siddartha.c@standav.com');\ncy.wait(2000);\ncy.get('.text-right > .btn').click();\ncy.wait(4000);\ncy.get('#loginpassword').type('Rich13*arab');\ncy.get('.btn-primary').click();\ncy.wait(4000);\ncy.screenshot();\ncy.get('.logo_style').should('not.be.empty');\ncy.wait(2000);\ncy.get('.hidden-xs > .name_style > .role').click();\ncy.wait(2000);\ncy.get('.dropdown-menu > :nth-child(9) > a').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<img.logo_style>' not to be 'empty'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<img.logo_style>' not to be 'empty'\n    at Context.eval (https://staging.docskiff.ai/__cypress/tests?p=cypress\\integration\\examples\\test1.js:112:27)",
+                "diff": null
+              },
+              "uuid": "4557acc4-fde9-426a-8b95-453faf4d9e97",
+              "parentUUID": "0b8d9f1e-6747-42fc-8304-73a5cbc456f2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4557acc4-fde9-426a-8b95-453faf4d9e97"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 66292,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "trashAssetsBeforeRuns": true,
+        "pageLoadTimeout": 100000
+      },
+      "version": "5.2.0"
+    }
+  }
+}
