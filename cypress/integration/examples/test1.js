@@ -49,16 +49,17 @@ describe('Create an account and Login then validate that the gift cards balance 
     cy.wait(2000);
     cy.get(':nth-child(3) > :nth-child(1) > .ya-card__whole-card-link > .a-box > .a-box-inner > .a-row > .a-span9 > .a-spacing-none').click();
     cy.wait(2000);
-    cy.get('#gc-ui-balance-gc-balance-value').contains('have.text', '$0.00');
+ //   cy.get('#gc-ui-balance-gc-balance-value').contains('have.text', '$0.00');
 
     cy.get('#gc-ui-balance-gc-balance-value').each(($e1, index, $list) => {
      
         const status=$e1.text();
-        
-        expect(status).to.match('$0.00');
+        console.log("status " +status);
+        expect(status).to.contains("$0.00");
+
        
        
     })
     })
 
- })
+  })
