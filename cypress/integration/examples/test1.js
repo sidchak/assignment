@@ -14,25 +14,25 @@ describe('Create an account and Login then validate that the gift cards balance 
     })
     })
    
-//     it('Create an Amazon account', () => {
+    it('Create an Amazon account', () => {
    
-//         const lp=new LoginPage();
+        const lp=new LoginPage();
 
-//         cy.wait(4000);
-//         lp.getstarthere().click();
-//         cy.wait(2000);
-//         lp.getname().type(this.data.name);
-//         cy.wait(2000);
-//         lp.getemail().type(this.data.username);
-//         cy.wait(2000);
-//         lp.getpwd().type(this.data.pwd);
-//         cy.wait(2000);
-//         lp.getreenterpwd().type(this.data.pwd);
-//         cy.wait(2000);
-//         lp.getcreateaccount().click();
+        cy.wait(4000);
+        lp.getstarthere().click();
+        cy.wait(2000);
+        lp.getname().type(this.data.name);
+        cy.wait(2000);
+        lp.getemail().type(this.data.username);
+        cy.wait(2000);
+        lp.getpwd().type(this.data.pwd);
+        cy.wait(2000);
+        lp.getreenterpwd().type(this.data.pwd);
+        cy.wait(2000);
+        lp.getcreateaccount().click();
         
-//   })
-// })
+  })
+})
   it('Login and verify if the gift cards value is $0.00', () => { 
 
     cy.get('#nav-link-accountList-nav-line-1').click();
