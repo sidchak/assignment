@@ -1,0 +1,136 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-05-08T07:43:48.622Z",
+    "end": "2021-05-08T07:44:30.339Z",
+    "duration": 41717,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "83738ac7-4bda-4d32-9c37-59efaa2b7e01",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test1.js",
+      "file": "cypress/integration/examples/test1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4ae7d921-eae9-4ddc-a518-a48bd934e544",
+          "title": "Create an account and Login then validate that the gift cards balance is 0",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create an Amazon account",
+              "fullTitle": "Create an account and Login then validate that the gift cards balance is 0 Create an Amazon account",
+              "timedOut": null,
+              "duration": 4367,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// const lp=new LoginPage();\n    // cy.wait(4000);\n    // lp.getstarthere().click();\n    // cy.wait(2000);\n    // lp.getname().type(this.data.name);\n    // cy.wait(2000);\n    // lp.getemail().type(this.data.username);\n    // cy.wait(2000);\n    // lp.getpwd().type(this.data.pwd);\n    // cy.wait(2000);\n    // lp.getreenterpwd().type(this.data.pwd);\n    // cy.wait(2000);\n    // lp.getcreateaccount().click();\n    // })",
+              "err": {},
+              "uuid": "9d5f84f4-4656-4b4e-9d7d-5798635b50cd",
+              "parentUUID": "4ae7d921-eae9-4ddc-a518-a48bd934e544",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login and verify if the gift cards value is $0.00",
+              "fullTitle": "Create an account and Login then validate that the gift cards balance is 0 Login and verify if the gift cards value is $0.00",
+              "timedOut": null,
+              "duration": 33962,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#nav-link-accountList-nav-line-1').click();\ncy.wait(2000);\ncy.get('#ap_email').type(\"siddhart.chakravarty@gmail.com\");\ncy.wait(2000);\ncy.get('.a-button-inner > #continue').click();\ncy.wait(2000);\ncy.get('#ap_password').type(\"Rich13*arab\");\ncy.wait(2000);\ncy.get('#signInSubmit').click();\ncy.wait(2000);\ncy.get('.nav-short-width').click();\ncy.wait(2000);\ncy.get(':nth-child(3) > :nth-child(1) > .ya-card__whole-card-link > .a-box > .a-box-inner > .a-row > .a-span9 > .a-spacing-none').click();\ncy.wait(2000); //   cy.get('#gc-ui-balance-gc-balance-value').contains('have.text', '$0.00');\ncy.get('#gc-ui-balance-gc-balance-value').each(($e1, index, $list) => {\n  const status = $e1.text();\n  console.log(\"status \" + status);\n  expect(status).to.contains(\"$0.00\");\n});",
+              "err": {
+                "message": "AssertionError: expected '\\n     \\n        \\n          \\n\\nUSD 0.00\\n        \\n        \\n     \\n  ' to include '$0.00'",
+                "estack": "AssertionError: expected '\\n     \\n        \\n          \\n\\nUSD 0.00\\n        \\n        \\n     \\n  ' to include '$0.00'\n    at Context.eval (https://www.amazon.com/__cypress/tests?p=cypress\\integration\\examples\\test1.js:163:25)",
+                "diff": null
+              },
+              "uuid": "879279a5-9f4c-40f0-b699-f6cebb2381ff",
+              "parentUUID": "4ae7d921-eae9-4ddc-a518-a48bd934e544",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9d5f84f4-4656-4b4e-9d7d-5798635b50cd"
+          ],
+          "failures": [
+            "879279a5-9f4c-40f0-b699-f6cebb2381ff"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 38329,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "trashAssetsBeforeRuns": true,
+        "pageLoadTimeout": 100000,
+        "env": {
+          "url": "https://www.amazon.com/"
+        }
+      },
+      "version": "5.2.0"
+    }
+  }
+}

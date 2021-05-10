@@ -1,0 +1,116 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-05-08T07:44:42.151Z",
+    "end": "2021-05-08T07:44:49.499Z",
+    "duration": 7348,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d4efd2b7-3533-4b66-b040-455f05265054",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test2.js",
+      "file": "cypress/integration/examples/test2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3793dc2a-79d2-49b7-a543-f04d55ab0cab",
+          "title": "Change the currency to AED and validate the same in the price of the product",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login and change the language to AED",
+              "fullTitle": "Change the currency to AED and validate the same in the price of the product login and change the language to AED",
+              "timedOut": null,
+              "duration": 4467,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const lp = new _LoginPage.default();\nlp.getsignin().click();\ncy.wait(2000);\ncy.login('siddhart.chakravarty@gmail.com', 'Rich13*arab');",
+              "err": {
+                "message": "TypeError: cy.login is not a function",
+                "estack": "TypeError: cy.login is not a function\n    at Context.eval (https://www.amazon.com/__cypress/tests?p=cypress\\integration\\examples\\test2.js:130:8)",
+                "diff": null
+              },
+              "uuid": "4721d0af-57d8-42db-adde-76dd62e17223",
+              "parentUUID": "3793dc2a-79d2-49b7-a543-f04d55ab0cab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4721d0af-57d8-42db-adde-76dd62e17223"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4467,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "trashAssetsBeforeRuns": true,
+        "pageLoadTimeout": 100000,
+        "env": {
+          "url": "https://www.amazon.com/"
+        }
+      },
+      "version": "5.2.0"
+    }
+  }
+}

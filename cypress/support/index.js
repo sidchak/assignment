@@ -14,5 +14,9 @@
 // ***********************************************************
 
 import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
-
+const customCommands = require('./commands.js')
 addMatchImageSnapshotCommand();
+
+module.exports = {
+    commands: customCommands
+  }
