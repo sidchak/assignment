@@ -32,3 +32,6 @@ node_modules\.bin\cypress open
 
 Run Eslint to scan JS test scripts :
 npm run lint
+
+Run Tagged tests like smoke or Regression suite:
+npx cypress run --env grep="Smoke"
