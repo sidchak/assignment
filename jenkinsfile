@@ -1,0 +1,32 @@
+pipeline{
+    agent { label 'Test' }
+    
+    stages {
+                    
+        stage ('cloneing')
+        
+        {
+
+            steps {
+                git branch: 'master', credentialsId: 'c87d6892-df0e-42d7-8cf2-8228627eba93', url: 'https://github.com/sidchak/assignment.git'
+            }
+        }
+        stage ('shell')
+        {
+            steps{
+                
+               sh label: '', script: '''npm install
+               sudo -S docker build -t cypress/included:6.6.0 .
+               sudo -S docker rm -f cypress
+               sudo -S docker run -itd --name cypress -v $PWD:/e2e -w /e2e cypress/included:6.6.0'''
+            }
+        }
+       
+    }
+    
+        post {
+            always{
+                emailext body: '''The test suite has run sucessfully, with attached testresults.''', subject: 'Test Report', to: 'siddhart.chakravarty@gmail.com xyz@gmail.com'
+            }
+        }
+}
