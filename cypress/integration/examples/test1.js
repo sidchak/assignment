@@ -2,6 +2,7 @@
 /// <reference types="Cypress" />
 import LoginPage from '../pageObjects/LoginPage'
 import HomePage from '../pageObjects/HomePage'
+
 var data = require('../../fixtures/fixture1.json')
 
 describe('Create an account and Login then validate that the gift cards balance is 0', () => {
@@ -9,7 +10,7 @@ describe('Create an account and Login then validate that the gift cards balance 
 
   beforeEach(function () {
 
-    cy.visit(Cypress.env('url'));
+         cy.visit(Cypress.env('url'));
 
 
   })
