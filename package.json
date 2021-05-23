@@ -19,7 +19,10 @@
   "author": "sid",
   "license": "ISC",
   "devDependencies": {
+    "@percy/cli": "^1.0.0-beta.50",
+    "@percy/cypress": "^3.1.0",
     "cypress": "^7.2.0",
+    "cypress-iframe": "^1.0.1",
     "cypress-image-snapshot": "^4.0.1",
     "eslint": "^7.25.0",
     "eslint-plugin-react": "^7.23.2",
@@ -27,6 +30,7 @@
     "mochawesome-merge": "^4.2.0"
   },
   "dependencies": {
+    "cypress-plugin-snapshots": "^1.4.4",
     "mochawesome-report-generator": "^5.2.0"
   }
 }

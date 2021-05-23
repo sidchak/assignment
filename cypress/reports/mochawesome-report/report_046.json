@@ -1,0 +1,116 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-22T08:16:21.747Z",
+    "end": "2021-05-22T08:16:34.465Z",
+    "duration": 12718,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "16fbe8e6-3cd4-4f71-8e53-cc35bdf5c28c",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test3.js",
+      "file": "cypress/integration/examples/test3.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5cce5521-a6fe-403b-9106-930b4046070b",
+          "title": "My First Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My FirstTest case",
+              "fullTitle": "My First Test Suite My FirstTest case",
+              "timedOut": null,
+              "duration": 9117,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.get('.search-keyword').type('ca');\ncy.wait(2000); //selenium get hit url in browser, cypress get acts like findElement of selenium\ncy.get('.product').should('have.length', 5);\ncy.get('.product:visible').should('have.length', 4); //Parent child chaining\ncy.get('.products').as('productLocator');\ncy.get('@productLocator').find('.product').should('have.length', 4);\ncy.get(':nth-child(3) > .product-action > button').click();\ncy.get('@productLocator').find('.product').eq(2).contains('ADD TO CART').click().then(function () {\n  console.log('sf'); //pure js\n});\ncy.get('@productLocator').find('.product').each(($el, index, $list) => {\n  const textVeg = $el.find('h4.product-name').text();\n  if (textVeg.includes('Cashews')) {\n    $el.find('button').click();\n  }\n}); //assert if logo text is correctly displayed\ncy.get('.brand').should('have.text', 'GREENKART'); //this is to print in logs\ncy.get('.brand').then(function (logoelement) {\n  cy.log(logoelement.text());\n}); // const logo=cy.get('.brand')\n// cy.log(cy.get('.brand').text())\n// cy.log(logo.text())\n//fixture",
+              "err": {},
+              "uuid": "5c202fa1-de36-4921-b2a3-fb906e8f8a19",
+              "parentUUID": "5cce5521-a6fe-403b-9106-930b4046070b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5c202fa1-de36-4921-b2a3-fb906e8f8a19"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9117,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "trashAssetsBeforeRuns": true,
+        "pageLoadTimeout": 100000,
+        "ignoreTestFiles": [
+          "**/__snapshots__/*",
+          "**/__image_snapshots__/*"
+        ],
+        "env": {
+          "url": "https://www.amazon.com/"
+        }
+      },
+      "version": "5.2.0"
+    }
+  }
+}

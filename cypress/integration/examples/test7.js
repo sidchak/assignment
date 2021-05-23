@@ -22,11 +22,27 @@ cy.get('tr td:nth-child(2)').each(($e1, index, $list) => {
     }
  
 })
- //mouse hover
+
+it('My secondTest case',function() {
+ 
+//mouse hover
 //div.mouse-hover-content
- cy.get('div.mouse-hover-content').invoke('show');
+cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
+
+cy.get('div.mouse-hover-content').invoke('show');
  cy.contains('Top').click();
  cy.url().should('include','top');
+
+ //cross domain
+ cy.get('#opentab').then(function(e1)
+ {
+
+  const url = e1.prop('href');
+  cy.log(url);
+  cy.visit(url);
+
+ })
  
+})
 })
 })

@@ -1,0 +1,116 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-22T07:50:12.706Z",
+    "end": "2021-05-22T07:50:20.206Z",
+    "duration": 7500,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8cfffce9-7eff-4a96-9da9-267ce873163a",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test1.js",
+      "file": "cypress/integration/examples/test1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "29588e0d-4a59-4574-b34c-bb9016e287e6",
+          "title": "Create an account and Login then validate that the gift cards balance is 0",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "visual testing-snapshot",
+              "fullTitle": "Create an account and Login then validate that the gift cards balance is 0 visual testing-snapshot",
+              "timedOut": null,
+              "duration": 4402,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.facebook.com/');\ncy.wait(2000);\ncy.percySnapshot(); // .then(() => {\n//   cy.get('img[src=\"https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg\"]').toMatchImageSnapshot();",
+              "err": {},
+              "uuid": "268031e6-f154-4abb-8e18-3555ff80163c",
+              "parentUUID": "29588e0d-4a59-4574-b34c-bb9016e287e6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "268031e6-f154-4abb-8e18-3555ff80163c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4402,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "trashAssetsBeforeRuns": true,
+        "pageLoadTimeout": 100000,
+        "ignoreTestFiles": [
+          "**/__snapshots__/*",
+          "**/__image_snapshots__/*"
+        ],
+        "env": {
+          "url": "https://www.amazon.com/"
+        }
+      },
+      "version": "5.2.0"
+    }
+  }
+}

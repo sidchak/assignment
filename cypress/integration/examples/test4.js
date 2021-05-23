@@ -20,3 +20,7 @@ $el.find('button').click()
 }
 })
 cy.get('.cart-icon > img').click();
+
+})
+
+})

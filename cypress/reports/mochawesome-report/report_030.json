@@ -1,0 +1,116 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-22T07:52:41.262Z",
+    "end": "2021-05-22T07:52:46.912Z",
+    "duration": 5650,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1a3c54f1-23f6-47bd-a195-2319057f7a6a",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test7.js",
+      "file": "cypress/integration/examples/test7.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "869dd0fe-553d-48a0-a07b-5263177e1c4d",
+          "title": "My Second Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My FirstTest case",
+              "fullTitle": "My Second Test Suite My FirstTest case",
+              "timedOut": null,
+              "duration": 3553,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Check boxes\ncy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\");\ncy.get('tr td:nth-child(2)').each(($e1, index, $list) => {\n  const text = $e1.text();\n  if (text.includes(\"Python\")) {\n    cy.get(\"tr td:nth-child(2)\").eq(index).next().then(function (price) {\n      const priceText = price.text();\n      expect(priceText).to.equal('25');\n    });\n  }\n}); //mouse hover\n//div.mouse-hover-content\ncy.get('div.mouse-hover-content').invoke('show');\ncy.contains('Top').click();\ncy.url().should('include', 'top');",
+              "err": {},
+              "uuid": "9e3c0b3e-4a21-4875-94f6-0ef543623353",
+              "parentUUID": "869dd0fe-553d-48a0-a07b-5263177e1c4d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9e3c0b3e-4a21-4875-94f6-0ef543623353"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3553,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "trashAssetsBeforeRuns": true,
+        "pageLoadTimeout": 100000,
+        "ignoreTestFiles": [
+          "**/__snapshots__/*",
+          "**/__image_snapshots__/*"
+        ],
+        "env": {
+          "url": "https://www.amazon.com/"
+        }
+      },
+      "version": "5.2.0"
+    }
+  }
+}

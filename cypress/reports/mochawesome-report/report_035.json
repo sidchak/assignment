@@ -1,0 +1,140 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-05-22T07:54:17.321Z",
+    "end": "2021-05-22T07:55:22.109Z",
+    "duration": 64788,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aa3eea90-8040-49ce-932a-10bf79cd4751",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test2.js",
+      "file": "cypress/integration/examples/test2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "76dee913-d786-4eb2-bfad-a0745e8875a5",
+          "title": "Change the currency to AED and validate the same in the price of the product",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login and change the language to AED and save it ",
+              "fullTitle": "Change the currency to AED and validate the same in the price of the product login and change the language to AED and save it ",
+              "timedOut": null,
+              "duration": 31971,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const hp = new _HomePage.default();\ncy.wait(2000);\nhp.gethover().trigger('mouseover');\ncy.wait(2000);\nhp.getchange().click();\ncy.wait(4000);\nhp.getchange().click({\n  force: true\n});\ncy.wait(2000);\nhp.getchangecurrency().click();\ncy.wait(2000);\nhp.getupdate().click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: ` #nav-flyout-icp > div.nav-template.nav-flyout-content.nav-tpl-itemList > span:nth-child(14) > span > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: ` #nav-flyout-icp > div.nav-template.nav-flyout-content.nav-tpl-itemList > span:nth-child(14) > span > a`, but never found it.\n    at HomePage.getchange (https://www.amazon.com/__cypress/tests?p=cypress\\integration\\examples\\test2.js:221:15)\n    at Context.eval (https://www.amazon.com/__cypress/tests?p=cypress\\integration\\examples\\test2.js:152:8)",
+                "diff": null
+              },
+              "uuid": "b44f75df-8365-40c1-90e4-4d9fc91bfc63",
+              "parentUUID": "76dee913-d786-4eb2-bfad-a0745e8875a5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login then search any product and hence find the price of it,validate the currency of it ",
+              "fullTitle": "Change the currency to AED and validate the same in the price of the product login then search any product and hence find the price of it,validate the currency of it ",
+              "timedOut": null,
+              "duration": 28306,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(2000);\nhp.getsearch().type(data.product);\ncy.wait(2000);\nhp.getsearchbutton().click();\ncy.wait(3000);\ncy.get('span.a-price-symbol').each(($e1, index, $list) => {\n  const status = $e1.text();\n  console.log(\"status \" + status);\n  expect(status).to.contains(\"AED\");\n});",
+              "err": {},
+              "uuid": "f393f8aa-c405-46e6-802b-cbfb41ad94b7",
+              "parentUUID": "76dee913-d786-4eb2-bfad-a0745e8875a5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f393f8aa-c405-46e6-802b-cbfb41ad94b7"
+          ],
+          "failures": [
+            "b44f75df-8365-40c1-90e4-4d9fc91bfc63"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 60277,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "trashAssetsBeforeRuns": true,
+        "pageLoadTimeout": 100000,
+        "ignoreTestFiles": [
+          "**/__snapshots__/*",
+          "**/__image_snapshots__/*"
+        ],
+        "env": {
+          "url": "https://www.amazon.com/"
+        }
+      },
+      "version": "5.2.0"
+    }
+  }
+}

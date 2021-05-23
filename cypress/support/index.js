@@ -12,9 +12,11 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-
+import 'cypress-plugin-snapshots/commands';
 import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
-const customCommands = require('./commands.js')
+import '@percy/cypress';
+const customCommands = require('./commands.js');
+
 addMatchImageSnapshotCommand();
 
 module.exports = {

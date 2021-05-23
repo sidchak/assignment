@@ -10,6 +10,11 @@
     "charts":true,
     "trashAssetsBeforeRuns": true,
     "pageLoadTimeout":100000,
+    
+    "ignoreTestFiles": [
+                        "**/__snapshots__/*",
+                        "**/__image_snapshots__/*"
+    ],
     "env" :
     {
       "url" :"https://www.amazon.com/"
